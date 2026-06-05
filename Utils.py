@@ -37,13 +37,13 @@ import ruamel.yaml
 yaml = ruamel.yaml.YAML()
 code_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(code_dir)
-# sys.path.append(f"{code_dir}/mycpp/build")
+sys.path.append(f"{code_dir}/../mycpp/build")
 try:
   import kornia
 except:
   kornia = None
 try:
-  import mycpp.build.mycpp as mycpp
+  import mycpp as mycpp
 except:
   mycpp = None
 try:
